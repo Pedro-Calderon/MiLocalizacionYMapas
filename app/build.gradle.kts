@@ -69,8 +69,17 @@ android {
 }
 
 dependencies {
+    implementation("com.google.maps.android:android-maps-utils:2.2.0")
+    implementation ("com.google.maps.android:maps-compose:4.3.3")
 
+    // Optionally, you can include the Compose utils library for Clustering,
+    // Street View metadata checks, etc.
+    implementation ("com.google.maps.android:maps-compose-utils:4.3.3")
 
+    // Optionally, you can include the widgets library for ScaleBar, etc.
+    implementation ("com.google.maps.android:maps-compose-widgets:4.3.3")
+    implementation("androidx.compose.ui:ui:1.6.5")
+    implementation("androidx.compose.material:material:1.6.5")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -91,4 +100,5 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
 }
